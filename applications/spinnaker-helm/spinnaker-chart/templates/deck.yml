@@ -15,7 +15,7 @@ spec:
   type: NodePort
 
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   # namespace: spinnaker
@@ -49,3 +49,6 @@ spec:
         configMap:
           name: spinnaker-config
           defaultMode: 0777
+  selector:
+    matchLabels:
+      app: deck
