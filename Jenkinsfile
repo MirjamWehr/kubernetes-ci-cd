@@ -22,6 +22,6 @@ node {
 
     stage "Deploy"
 
-        sh "kubectl apply -f applications/hello-kenzan/k8s/manual-deployment.yaml"
+        sh "sh ourdeploy.sh ${tag}"
 
 }
